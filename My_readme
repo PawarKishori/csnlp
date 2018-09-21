@@ -1,0 +1,12 @@
+Add trained models to csnlp (Parser directory)
+
+1. git clone https://bitbucket.org/irshadbhat/nsdp-cs-models/src/c775772ec71639907771603c3071afe79e1382d9/PANINI/HI/PARSER
+2. go to PARSER/PANINI/HI/PARSER and extract bz2 file with bunzip2 *.bz2
+3. go to PARSER/UD/HI/PARSER and extract bz2 file with bunzip2 *.bz2
+
+set the path in bashrc :  export hindi_parser=<path for nsdp parser>
+     EX :  export hindi_parser=$HOME/hindi-parsers/csnlp
+
+The tokenizer is added inside the csnlp directory, so a git inside git. Verify this add resolve if any issue.
+https://irshadbhat@bitbucket.org/iscnlp/tokenizer.git
+Added run_hindi_parser.sh => which calls tokenizer and parser one after the other
