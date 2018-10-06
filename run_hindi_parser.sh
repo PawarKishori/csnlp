@@ -8,6 +8,7 @@ output_file=$2 #tmp_anu_dir/tmp/oneE_tmp/hindi_dep_parser_out.txt ..............
 
 cd $hindi_parser/tokenizer/     # Go to tokenizer directory
 echo in  tokenizer *****************
+touch hindi_wx_tokenised
 isc-tokenizer  -i $input_file -o $hindi_parser/hindi_wx_tokenised
 
 echo tokenizer ran *****************
