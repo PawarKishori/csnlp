@@ -9,4 +9,8 @@ set the path in bashrc :  export hindi_parser=<path for nsdp parser>
 
 The tokenizer is added inside the csnlp directory, so a git inside git. Verify this add resolve if any issue.
 https://irshadbhat@bitbucket.org/iscnlp/tokenizer.git
+Build the tokenizer 
+1. cd tokenizer
+2. sudo python setup.py install
+
 Added run_hindi_parser.sh => which calls tokenizer and parser one after the other
