@@ -1,5 +1,6 @@
 The model is trained on wx data, so first change the input to wx format.
+/usr/bin/python mono_jm_parser.py --load /home/kishori/csnlp/PARSER/UD/HI/PARSER/hi-ud-parser --test obl-soma --output-file obl-soma.out
 
-python mono_jm_parser.py --load /home/kishori/csnlps/PARSER/UD/HI/PARSER/hi-ud-parser --test meet-18-8 --output-file meet-18-8.out.v2.ud
+python mono_jm_parser.py --load /home/kishori/csnlp/PARSER/UD/HI/PARSER/hi-ud-parser --test demo1 --output-file demo1.out
 
 python mono_jm_parser.py --load /home/kishori/csnlps/PARSER/PANINI/HI/PARSER/hi-bist-parser --test meet-18-8 --output-file meet-18-8.out.v2.panini
