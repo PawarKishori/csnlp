@@ -15,9 +15,6 @@ Steps to install Irshad's Hindi Parser and Tokenizer
         python mono_jm_parser.py --load <path-of-nsdp-parser>/PARSER/PANINI/HI/PARSER/hi-bist-parser --test <inputfile-name> --output-file <outfile-name>
         Ex: python mono_jm_parser.py --load ~/hindi-parsers/nsdp-cs/PARSER/PANINI/HI/PARSER/hi-bist-parser --test  test --output-file test_out
 
-For first time:
---------------
-1. sudo apt-get install python-networkx
 **************  Tokenizer Installation  ****************************************
 
 The tokenizer is added inside the csnlp(hindi_parser) directory, so a git inside git. Verify this add resolve if any issue.
@@ -27,7 +24,7 @@ Build the tokenizer
 2. cd tokenizer
 3. sudo python setup.py install
 
-***************** Running Hindi Parser (with integrated Tokenizer *********************************
+***************** Running Hindi Parser (with integrated Tokenizer) *********************************
 Prerequisite: The input file to hindi parser should be in wx.
 
 Syntax: 
