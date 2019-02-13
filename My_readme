@@ -1,16 +1,37 @@
-Add trained models to csnlp (Parser directory)
+Steps to install Irshad's Hindi Parser and Tokenizer
 
-1. git clone https://bitbucket.org/irshadbhat/nsdp-cs-models/src/c775772ec71639907771603c3071afe79e1382d9/PANINI/HI/PARSER
-2. go to PARSER/PANINI/HI/PARSER and extract bz2 file with bunzip2 *.bz2
-3. go to PARSER/UD/HI/PARSER and extract bz2 file with bunzip2 *.bz2
+************* Hindi Parser Installation *******************************************
+1. git clone https://github.com/PawarKishori/csnlp.git
+2. sudo apt-get install python-pip
+3. sudo pip install -r requirements.txt
+4. sudo pip install dynet
+5. git clone https://bitbucket.org/irshadbhat/nsdp-cs-models/src/c775772ec71639907771603c3071afe79e1382d9/PANINI/HI/PARSER
+6. go to PARSER/PANINI/HI/PARSER and extract bz2 file with bunzip2 *.bz2
+7. go to PARSER/UD/HI/PARSER and extract bz2 file with bunzip2 *.bz2
+8. set the path in bashrc :  export hindi_parser=<path for nsdp parser>
+     EX :  export hindi_parser=$HOME/nsdp-cs
 
-set the path in bashrc :  export hindi_parser=<path for nsdp parser>
-     EX :  export hindi_parser=$HOME/hindi-parsers/csnlp
+	Run:
+        python mono_jm_parser.py --load <path-of-nsdp-parser>/PARSER/PANINI/HI/PARSER/hi-bist-parser --test <inputfile-name> --output-file <outfile-name>
+        Ex: python mono_jm_parser.py --load ~/hindi-parsers/nsdp-cs/PARSER/PANINI/HI/PARSER/hi-bist-parser --test  test --output-file test_out
 
-The tokenizer is added inside the csnlp directory, so a git inside git. Verify this add resolve if any issue.
-https://irshadbhat@bitbucket.org/iscnlp/tokenizer.git
+For first time:
+--------------
+1. sudo apt-get install python-networkx
+**************  Tokenizer Installation  ****************************************
+
+The tokenizer is added inside the csnlp(hindi_parser) directory, so a git inside git. Verify this add resolve if any issue.
+
+1. git clone https://irshadbhat@bitbucket.org/iscnlp/tokenizer.git
 Build the tokenizer 
-1. cd tokenizer
-2. sudo python setup.py install
+2. cd tokenizer
+3. sudo python setup.py install
 
-Added run_hindi_parser.sh => which calls tokenizer and parser one after the other
+***************** Running Hindi Parser (with integrated Tokenizer *********************************
+Prerequisite: The input file to hindi parser should be in wx.
+
+Syntax: 
+sh run_hindi_parser.sh <absolute_path_to_hindi_wx_file/hindi_wx_input> <output_file>
+
+Example:
+sh run_hindi_parser.sh /home/kishori/csnlp/hindi_wx /home/kishori/hindi_out.txt
